@@ -139,16 +139,16 @@ choco feature enable -n allowGlobalConfirmation
 
 ```bash
 # oh-my-zsh와 비슷한 Tool install
-Install-Module oh-my-posh -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser -A
 
 # oh-my-posh git Tool install
-Install-Module posh-git -Scope CurrentUser
+Install-Module posh-git -Scope CurrentUser -A
 
 # Pretty Icon
-Install-Module -Name Terminal-Icons -Repository PSGallery
+Install-Module -Name Terminal-Icons -Repository PSGallery -A
 
 # Pretty ls Install
-Install-Module -Name PowerColorLS -Repository PSGallery
+Install-Module -Name PowerColorLS -Repository PSGallery -A
 
 # oh-my-posh update
 Update-Module -Name oh-my-posh -AllowPrerelease -Scope CurrentUser
@@ -191,3 +191,41 @@ echo "Set-Alias -Name ls -Value PowerColorLS -Option AllScope" >> ${profile}
    |-------------- | -------------- | 
    | ![win6](./imgs/win6.png)|![win7](./imgs/win7.png)|
 
+- 마지막으로 `Terminal` 테마에 대해 올리겠습니다.
+
+```json
+"defaults": 
+        {
+            "[colorScheme": "Tokyo Night",]
+            "font": 
+            {
+                "face": "너드폰트 설치해서 넣어주세요"
+            }
+        },
+"schemes":[
+   {
+           "name": "Tokyo Night",
+           "foreground": "#a9b1dc",
+           "background": "#1a1b2c",
+           "cursorColor": "#c0caf5",
+           "selectionBackground": "#28344a",
+           "black": "#414868",
+           "red": "#f7768e",
+           "green": "#73daca",
+           "yellow": "#e0af68",
+           "blue": "#7aa2f7",
+           "purple": "#bb9af7",
+           "cyan": "#7dcfff",
+           "white": "#c0caf5",
+           "brightBlack": "#414868",
+           "brightRed": "#f7768e",
+           "brightGreen": "#73daca",
+           "brightYellow": "#e0af68",
+           "brightBlue": "#7aa2f7",
+           "brightPurple": "#bb9af7",
+           "brightCyan": "#7dcfff",
+           "brightWhite": "#c0caf5"
+   }
+]
+
+```

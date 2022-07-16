@@ -1,9 +1,9 @@
 # My-Terminal <img src="https://img.shields.io/badge/Terminal-4D4D4D?style=for-the-badge&logo=Windows Terminal&logoColor=white"> 
 
-- Windows
+### Windows
    ![windows](./imgs/win.png)
 
-- Mac
+### Mac
    ![Macs](./imgs/mac.png) 
    
 

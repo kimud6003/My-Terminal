@@ -121,7 +121,7 @@ choco feature enable -n allowGlobalConfirmation
 - 방법 2
 
    ```bash
-      install microsoft-windows-terminal
+      choco install microsoft-windows-terminal
    ``` 
 
 - 그럼 이제 `Terminal`설치가 완료가 되었습니다.
@@ -129,7 +129,7 @@ choco feature enable -n allowGlobalConfirmation
 - 이제 `powerShell` 최신 버전을 설치해보도록 하겠습니다. (2022-7월 기준으로 7.2.5버전이 최신입니다)
 
    ```bash
-      install powershell-core
+      choco install powershell-core
    ``` 
    ![win4](./imgs/win4.png)
 

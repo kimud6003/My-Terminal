@@ -144,6 +144,9 @@ Install-Module oh-my-posh -Scope CurrentUser
 # oh-my-posh git Tool install
 Install-Module posh-git -Scope CurrentUser
 
+# Pretty Icon
+Install-Module -Name Terminal-Icons -Repository PSGallery
+
 # Pretty ls Install
 Install-Module -Name PowerColorLS -Repository PSGallery
 
@@ -163,17 +166,28 @@ Get-PoshThemes
 # posh 실행
 Set-PoshPrompt -Theme M365Princess
 ```
+- 여기 까지 실행하면 아마 아래처럼 바뀌어있을겁니다 
+   ![win5](./imgs/win5.png)
 
-- 이제 설치가 끝났으니 설정을 하나 해주도록 하겠습니다.
+- 하지만 `powershell`을 다시 새로고침하면 아마 초기화 될것인데 이를 방지하기 위해 우리는 설정파일에 내용을 넣어 주어야 합니다.
 
-- `$PSHOME\Microsoft.PowerShell_profile.ps1` 파일을 열어 아래 코드를 넣어주면 됩니다.
+- 아래 코드를 복사해서 `powershell`에 넣으면 자동으로 설정파일에 글을 작성하게 될것이니 그냥 실행시켜주세요 
 
 ```bash
-Import-Module PSReadLine
-Import-Module PowerColorLS
-Set-PoshPrompt -Theme M365Princesss
-Set-PSReadLineOption -PredictionSource History
-Set-Alias -Name ls -Value PowerColorLS -Option AllScope
+
+# 설정 파일에 내용 넣어주기
+echo "Import-Module PSReadLine" >> ${profile}
+
+echo "Import-Module PowerColorLS" >> ${profile}
+
+echo "Set-PoshPrompt -Theme M365Princesss" >> ${profile}
+
+echo "Set-PSReadLineOption -PredictionSource History" >> ${profile}
+
+echo "Set-Alias -Name ls -Value PowerColorLS -Option AllScope" >> ${profile}
 ```
 
+   | autosuggestions | Pretty LS  | 
+   |-------------- | -------------- | 
+   | ![win6](./imgs/win6.png)|![win7](./imgs/win7.png)|
 

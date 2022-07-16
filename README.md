@@ -1,6 +1,6 @@
 # My-Terminal
 
-<img src ="https://img.shields.io/badge/PowerShell-5391FE.svg?&style=for-the-badge&logo=PowerShell&logoColor=5391FE">
+<img src ="https://img.shields.io/badge/PowerShell-5391FE.svg?&style=for-the-badge&logo=powershell&logoColor=5391FE">
 <img src="https://img.shields.io/badge/Terminal-4D4D4D?style=for-the-badge&logo=Windows Terminal&logoColor=white"> 
 - 해당 레포지토리는 `mac`, `linux`, `windows`에서 터미널 환경을 사용할때마다 번거로움을 느껴 설정 커맨드를 저장하고자 하는 레포지토리입니다.
 

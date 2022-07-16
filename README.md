@@ -246,3 +246,4 @@ choco feature enable -n allowGlobalConfirmation
    nvim
 
 ```
+![windows](./imgs/win.png)

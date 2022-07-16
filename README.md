@@ -139,32 +139,32 @@ choco feature enable -n allowGlobalConfirmation
 
 ```bash
 # oh-my-zsh와 비슷한 Tool install
-Install-Module oh-my-posh -Scope CurrentUser -A
+   Install-Module oh-my-posh -Scope CurrentUser 
 
 # oh-my-posh git Tool install
-Install-Module posh-git -Scope CurrentUser -A
+   Install-Module posh-git -Scope CurrentUser 
 
 # Pretty Icon
-Install-Module -Name Terminal-Icons -Repository PSGallery -A
+   Install-Module -Name Terminal-Icons -Repository PSGallery 
 
 # Pretty ls Install
-Install-Module -Name PowerColorLS -Repository PSGallery -A
+   Install-Module -Name PowerColorLS -Repository PSGallery 
 
 # oh-my-posh update
-Update-Module -Name oh-my-posh -AllowPrerelease -Scope CurrentUser
+   Update-Module -Name oh-my-posh -AllowPrerelease -Scope CurrentUser
 
 # zsh-autosuggestions 기능하는 Tool
-Import-Module PSReadLine
-Set-PSReadLineOption -PredictionSource History
+   Import-Module PSReadLine
+   Set-PSReadLineOption -PredictionSource History
 
 # .zshrc의 powershell 버전인 profile파일 만들기
-New-Item -ItemType File -Path $PROFILE
+   New-Item -ItemType File -Path $PROFILE
 
 # poshTheme 설치
-Get-PoshThemes
+   Get-PoshThemes
 
 # posh 실행
-Set-PoshPrompt -Theme M365Princess
+   Set-PoshPrompt -Theme M365Princess
 ```
 - 여기 까지 실행하면 아마 아래처럼 바뀌어있을겁니다 
    ![win5](./imgs/win5.png)
@@ -176,15 +176,15 @@ Set-PoshPrompt -Theme M365Princess
 ```bash
 
 # 설정 파일에 내용 넣어주기
-echo "Import-Module PSReadLine" >> ${profile}
+   echo "Import-Module PSReadLine" >> ${profile}
 
-echo "Import-Module PowerColorLS" >> ${profile}
+   echo "Import-Module PowerColorLS" >> ${profile}
 
-echo "Set-PoshPrompt -Theme M365Princesss" >> ${profile}
+   echo "Set-PoshPrompt -Theme M365Princesss" >> ${profile}
 
-echo "Set-PSReadLineOption -PredictionSource History" >> ${profile}
+   echo "Set-PSReadLineOption -PredictionSource History" >> ${profile}
 
-echo "Set-Alias -Name ls -Value PowerColorLS -Option AllScope" >> ${profile}
+   echo "Set-Alias -Name ls -Value PowerColorLS -Option AllScope" >> ${profile}
 ```
 
    | autosuggestions | Pretty LS  | 
@@ -193,13 +193,15 @@ echo "Set-Alias -Name ls -Value PowerColorLS -Option AllScope" >> ${profile}
 
 - 마지막으로 `Terminal` 테마에 대해 올리겠습니다.
 
+- 테마를 설치하기전에 `FiraCode Nerd Font`를 설치하고 가도록 하겠습니다. [링크](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip) 
+
 ```json
 "defaults": 
         {
-            "[colorScheme": "Tokyo Night",]
+            "colorScheme": "Tokyo Night",
             "font": 
             {
-                "face": "너드폰트 설치해서 넣어주세요"
+                "face": "FiraCode Nerd Font"
             }
         },
 "schemes":[
@@ -227,5 +229,20 @@ echo "Set-Alias -Name ls -Value PowerColorLS -Option AllScope" >> ${profile}
            "brightWhite": "#c0caf5"
    }
 ]
+
+```
+
+- 추가적으로 `nvim`을 사용하실분은 아래 코드를 따라 쳐주세요 
+
+
+```bash
+
+   choco install neovim
+
+   choco install lazygit
+
+   git clone https://github.com/kimud6003/NvChad $HOME\AppData\Local\nvim
+
+   nvim
 
 ```
